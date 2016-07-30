@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[vue学习（1）]]></title>
+      <url>http://zxypro.com/2016/07/30/vue%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/</url>
+      <content type="html"><![CDATA[<h1 id="vue学习"><a href="#vue学习" class="headerlink" title="vue学习"></a>vue学习</h1><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>因为 JavaScript 的限制，Vue.js 不能检测到下面数组变化：</p>
+<ol>
+<li>直接用索引设置元素，如 vm.items[0] = {}；</li>
+<li>修改数据的长度，如 vm.items.length = 0。</li>
+</ol>
+<p>为了解决问题 (1)，Vue.js 扩展了观察数组，为它添加了一个 $set() 方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 与 `example1.items[0] = ...` 相同，但是能触发视图更新</span></div><div class="line">example1.items.$set(<span class="number">0</span>, &#123; childMsg: <span class="string">'Changed!'</span>&#125;)</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>至于问题 (2)，只需用一个空数组替换 items。</p>
+<h2 id="方法与事件处理"><a href="#方法与事件处理" class="headerlink" title="方法与事件处理"></a>方法与事件处理</h2><p>event是原生的dom事件，event.target可以拿到原生的dom节点</p>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
