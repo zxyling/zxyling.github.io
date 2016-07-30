@@ -96,7 +96,7 @@
 类级别：例如 $.myPlugin()
 对象级别：例如$(‘#node’).myPlugin()
 类级别插件可以理解为拓展 jQuery 类，即给 jQuery 添加新的全局函数，典型的例子就是$.ajax()这个函数。JQ的全局函数就是属于JQ命名空间的函数。另一种是对象级别的插件，即作用于指定的JQ对象，典型">
-<meta property="og:updated_time" content="2016-07-30T05:00:40.560Z">
+<meta property="og:updated_time" content="2016-07-30T05:04:04.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JQurey插件写法（1）">
 <meta name="twitter:description" content="JQuery插件(1)1.插件的类别在jQuery中要使用一个插件，一般有两种形式：
@@ -358,6 +358,7 @@
 <p>类级别：例如 $.myPlugin()</p>
 <p>对象级别：例如$(‘#node’).myPlugin()</p>
 <p>类级别插件可以理解为拓展 jQuery 类，即给 jQuery 添加新的全局函数，典型的例子就是$.ajax()这个函数。JQ的全局函数就是属于JQ命名空间的函数。另一种是对象级别的插件，即作用于指定的JQ对象，典型的例子$(‘.msg’).show()。</p>
+<a id="more"></a>
 <h3 id="类级别JQ插件的开发"><a href="#类级别JQ插件的开发" class="headerlink" title="类级别JQ插件的开发"></a>类级别JQ插件的开发</h3><h4 id="1-原始写法"><a href="#1-原始写法" class="headerlink" title="1.原始写法"></a>1.原始写法</h4><p>一般在项目中我们会引入一个 js 文件，里面存放了所有的 js 代码。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"http://www.lovelucy.info/all.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>只要写一些函数简单地放在文件里，就算是一个模块，直接调用就行了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function m1()&#123;</div><div class="line">　　//...</div><div class="line">&#125;</div><div class="line">function m2()&#123;</div><div class="line">   //...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
