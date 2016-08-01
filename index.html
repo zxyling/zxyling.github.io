@@ -291,6 +291,133 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/01/redux-1/" itemprop="url">
+                  redux(1)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-01T18:02:42+08:00" content="2016-08-01">
+              2016-08-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/01/redux-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/01/redux-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>– 要了解redux首先要理解flux的工作原理，redux是对flux的一种实现</p>
+<p>Flux 的核心就是一个简单的约定：视图层组件不允许直接修改应用状态，只能触发 action。应用的状态必须独立出来放到 store 里面统一管理，通过侦听 action 来执行具体的状态操作。</p>
+<p>所谓的单项数据流，就是当用户进行操作的时候，会从组件发出一个action,这个action流到store里面，触发store对状态进行改动，然后store又触发组件基于新的状态重新渲染。</p>
+<h2 id="这样做的好处："><a href="#这样做的好处：" class="headerlink" title="这样做的好处："></a>这样做的好处：</h2><p>1.视图组件变得很薄，只包含了渲染逻辑和触发action这两个职责，即所谓“dump components”。</p>
+<p>2.要理解一个store可能发生的状态变化，只需要看它所注册的action回调就可以。</p>
+<p>3.任何状态的变化都必须通过action触发，而action又必须通过dispatcher走，所以整个应用的每一次状态变化都会从同一个地方流过。其实flux和mvc最不一样的就在这里。react在宣传的时候一直强调的一点就是“理解你的应用状态变化是很困难的”，flux的意义就在于强制让所有的状态变化都必须留下一笔记录，这样就可以利用这个来做各种debug工具，历史回滚等等。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/01/redux-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/30/JQurey插件写法（1）/" itemprop="url">
                   JQurey插件写法（1）
                 </a>
@@ -564,7 +691,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -572,7 +699,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -581,7 +708,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
