@@ -8,10 +8,10 @@
       <url>http://zxypro.com/2016/08/01/redux-1/</url>
       <content type="html"><![CDATA[<p>– 要了解redux首先要理解flux的工作原理，redux是对flux的一种实现</p>
 <p>Flux 的核心就是一个简单的约定：视图层组件不允许直接修改应用状态，只能触发 action。应用的状态必须独立出来放到 store 里面统一管理，通过侦听 action 来执行具体的状态操作。</p>
-<p>所谓的单项数据流，就是当用户进行操作的时候，会从组件发出一个action,这个action流到store里面，触发store对状态进行改动，然后store又触发组件基于新的状态重新渲染。</p>
+<p>所谓的单项数据流，就是当用户进行操作的时候，会从组件发出一个action,这个action流到store里面，触发store对状态进行改动，然后store又触发组件基于新的状态重新渲染。<br><a id="more"></a></p>
 <h2 id="这样做的好处："><a href="#这样做的好处：" class="headerlink" title="这样做的好处："></a>这样做的好处：</h2><p>1.视图组件变得很薄，只包含了渲染逻辑和触发action这两个职责，即所谓“dump components”。</p>
 <p>2.要理解一个store可能发生的状态变化，只需要看它所注册的action回调就可以。</p>
-<p>3.任何状态的变化都必须通过action触发，而action又必须通过dispatcher走，所以整个应用的每一次状态变化都会从同一个地方流过。其实flux和mvc最不一样的就在这里。react在宣传的时候一直强调的一点就是“理解你的应用状态变化是很困难的”，flux的意义就在于强制让所有的状态变化都必须留下一笔记录，这样就可以利用这个来做各种debug工具，历史回滚等等。<br><a id="more"></a></p>
+<p>3.任何状态的变化都必须通过action触发，而action又必须通过dispatcher走，所以整个应用的每一次状态变化都会从同一个地方流过。其实flux和mvc最不一样的就在这里。react在宣传的时候一直强调的一点就是“理解你的应用状态变化是很困难的”，flux的意义就在于强制让所有的状态变化都必须留下一笔记录，这样就可以利用这个来做各种debug工具，历史回滚等等。</p>
 <h2 id="先来在来说说redux"><a href="#先来在来说说redux" class="headerlink" title="先来在来说说redux"></a>先来在来说说redux</h2><p>链接：<a href="https://www.zhihu.com/question/41312576/answer/90782136" target="_blank" rel="external">https://www.zhihu.com/question/41312576/answer/90782136</a></p>
 <ol>
 <li>React有props和state: props意味着父级分发下来的属性，state意味着组件内部可以自行管理的状态，并且整个React没有数据向上回溯的能力，也就是说数据只能单向向下分发，或者自行内部消化。<br>理解这个是理解React和Redux的前提。</li>
